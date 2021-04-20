@@ -1,0 +1,47 @@
+@import "bootstrap";
+
+@import "header";
+@import "texts";
+@import "buttons";
+@import "video-part";
+@import "customer";
+@import "plan-and-manage";
+@import "read-about";
+@import "statistics";
+@import "carousel-list";
+@import "rewievs";
+@import "customer-questions";
+@import "accordion";
+@import "get-started";
+@import "email-address";
+@import "footer";
+@import "burger";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E4E6F0;
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+/** BACKGROUND COLOR**/
+.bg {
+  background-color: #F5F8FF;
+}
+
+.bg-w {
+  background-color: #FFFFFF;
+}
+
+.bg-grad {
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+}
+
+
+

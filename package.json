@@ -1,0 +1,20 @@
+{
+  "name": "maket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:scss": "node-sass src/styles/styles.scss -o dist/css  --output-style compressed --watch",
+    "start:server": "ws --directory ./dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "ws": "^7.4.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
+}

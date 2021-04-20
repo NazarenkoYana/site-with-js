@@ -1,0 +1,115 @@
+footer {
+  background: #FFFFFF;
+  border-top: 1px solid #D8E3FE;
+  padding: 93px 117px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .img-footer img {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+  }
+
+  img.img-footer {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  nav.menu {
+    a {
+      padding: 0 20px;
+      color: #697CA6;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 5px #E6E6E6;
+      text-decoration: none;
+
+      @include media-breakpoint-down(sm) {
+        padding: 10px;
+      }
+
+    }
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  nav.icon-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 6px;
+    margin-right: 44px;
+
+    a {
+      width: 18px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img:last-of-type {
+        visibility: collapse;
+        position: absolute;
+      }
+
+      &:hover {
+
+        img:first-of-type {
+          visibility: collapse;
+          position: absolute;
+        }
+
+        img:last-of-type {
+          visibility: visible;
+          position: absolute;
+        }
+      }
+
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-right: 0;
+      margin-top: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+      margin-top: 0;
+    }
+  }
+
+  button.btn.btn-started {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 19px 20px;
+  }
+
+  p.copyright {
+    letter-spacing: 0.05em;
+    color: #AEB8D0;
+    padding: 28px 0 0 20px;
+    margin: 0;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      padding: 28px 0 0 0;
+    }
+  }
+}

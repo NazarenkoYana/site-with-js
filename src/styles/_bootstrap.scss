@@ -1,0 +1,42 @@
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1440px
+) !default;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+
+$primary: #4C85FF !default;
+$secondary: #ADB4D2 !default;
+$danger: #FFD7D7 !default;
+$light: #FFFFFF !default;
+
+$border-radius: 0.125rem !default; // (2px)
+$btn-font-weight: 700 !default;
+$btn-padding-y: 0.813rem !default; // (13px)
+$btn-padding-x: 1.313rem !default; // (21px)
+$btn-font-family: 'Quicksand' !default;
+
+
+//**INPUT**//
+$input-bg: #EFEFF7 !default;
+$input-border-radius: 0.313rem !default;
+$input-placeholder-color: #7A85AD !default;
+$input-border-color: #7A85AD !default;
+$input-border-width: 0 !default;
+$input-padding-y: 1.313rem !default;
+$input-padding-x: 1.438rem !default;
+//**INPUT**//
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+

@@ -1,0 +1,32 @@
+.customer-questions {
+
+  .customer-questions-content {
+    padding: 176px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+
+    p {
+      line-height: 12px;
+      letter-spacing: 0.1em;
+      color: #3D4F9F;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h4 {
+      line-height: 30px;
+      text-align: center;
+      color: #3D4F9F;
+      margin-bottom: 68px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 50px 10px 0;
+    }
+
+  }
+
+}

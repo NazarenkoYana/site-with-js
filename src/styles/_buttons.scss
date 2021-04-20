@@ -1,0 +1,35 @@
+button.btn.btn-started {
+  line-height: 16.25px;
+  color: rgba(58, 121, 255, 1);
+  background-color: #D2E1FF;
+}
+
+button.btn.btn-video {
+  background: #FFFFFF;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  z-index: 20;
+  box-sizing: border-box;
+}
+
+button.btn.btn-primary {
+  padding: 13px 23px 13px 25px;
+  line-height: 16px;
+}
+
+button.btn.btn-outline-secondary {
+  border: 1px solid #D1D1E4;
+  padding: 13px 24px;
+  line-height: 16px;
+}
+
+button.btn.btn-danger {
+  line-height: 16px;
+  color: #D43F3F;
+}
+
+button.btn.btn-light {
+  color: #A6B6DA;
+  line-height: 16px;
+}

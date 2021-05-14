@@ -1,42 +1,61 @@
 .video-part {
+  width: 100%;
+  background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+  position: relative;
+  height: 100%;
 
-  .back-gradient {
-    background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
-    box-sizing: border-box;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    position: relative;
-    height: 570px;
+  .video-part-content {
+    padding: 150px 0;
 
-    img.gradient {
-      width: 100%;
-      //height: 465px;
-      object-fit: contain;
-      position: absolute;
-      bottom: 0;
+    .video-part-content-title {
+      font-size: 10px;
+      font-style: normal;
+      line-height: 12px;
+      letter-spacing: 0.1em;
+      color: #3D4F9F;
+      z-index: 21;
     }
 
-    img.gradient2 {
-      position: absolute;
-      bottom: 53px;
-      left: 440px;
-      z-index: 3;
-
-      @include media-breakpoint-between(xs, lg){
-        display: none;
-      }
+    .video-part-content-item {
+      font-size: 48px;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 60px;
+      text-align: center;
+      color: #3D4F9F;
+      margin-bottom: 28px;
+      z-index: 23;
     }
 
-    img.gradient3 {
+    .video-part-content-desc {
+      font-size: 15px;
+      font-weight: 400;
+      color: #8D96BD;
+      line-height: 29px;
+      letter-spacing: 0.03em;
+    }
+
+    .center-button {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      z-index: 25;
+    }
+  }
+
+  .video-part-gradient-box {
+
+    .gradient3 {
       position: absolute;
       right: 150px;
       bottom: 0;
-      animation-name: img3;
+      animation-name: gradient3;
       animation-duration: 30s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
 
-    @keyframes img3 {
+    @keyframes gradient3 {
       from {
         right: 150px;
         bottom: 0;
@@ -48,17 +67,17 @@
       }
     }
 
-    img.gradient4 {
+    .gradient4 {
       position: absolute;
       right: 95px;
       top: 0;
-      animation-name: img4;
+      animation-name: gradient4;
       animation-duration: 30s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
 
-    @keyframes img4 {
+    @keyframes gradient4 {
       from {
         right: 95px;
         top: 0;
@@ -70,21 +89,17 @@
       }
     }
 
-    img.gradient5 {
+    .gradient5 {
       position: absolute;
       left: 230px;
       top: 50px;
-      animation-name: img5;
+      animation-name: gradient5;
       animation-duration: 30s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
     }
 
-    @keyframes img5 {
+    @keyframes gradient5 {
       from {
         left: 230px;;
         top: 50px;
@@ -96,27 +111,23 @@
       }
     }
 
-    img.gradient6 {
+    .gradient6 {
       position: absolute;
       left: 0;
       top: 140px;
     }
 
-    img.gradient7 {
+    .gradient7 {
       position: absolute;
       left: 215px;
       bottom: 100px;
-      animation-name: img7;
+      animation-name: gradient7;
       animation-duration: 30s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
     }
 
-    @keyframes img7 {
+    @keyframes gradient7 {
       from {
         left: 215px;
         bottom: 100px;
@@ -128,86 +139,54 @@
       }
     }
 
-    img.gradient8 {
+    .gradient8 {
       position: absolute;
       right: 0;
       bottom: 60px;
     }
+  }
 
-    .video-part-text {
-      margin-top: 90px;
+  .video-part-main-gradient {
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+  }
 
-      p {
-        font-style: normal;
-        line-height: 12px;
-        letter-spacing: 0.1em;
-        color: #3D4F9F;
-        z-index: 21;
+  .video-part-ellipse-paginator {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 28px;
+    left: calc(50% - 30px);
+    z-index: 26;
 
-        &.video-about {
-          font-style: normal;
-          line-height: 29px;
-          text-align: center;
-          letter-spacing: 0.03em;
-          color: #8D96BD;
-          margin: 0;
-          z-index: 22;
-        }
-      }
 
-      h1 {
-        font-style: normal;
-        line-height: 60px;
-        text-align: center;
-        color: #3D4F9F;
-        margin-bottom: 28px;
-        z-index: 23;
+    div {
+      width: 8px;
+      height: 8px;
+      background-color: #D1D6E3;
+      border-radius: 50%;
+      margin: 0 6px;
 
-        span {
-          font-style: normal;
-          line-height: 60px;
-          color: #3D4F9F;
-          z-index: 24;
-
-          @include media-breakpoint-down(sm) {
-            font-size: 35px;
-          }
-        }
-
-        @include media-breakpoint-down(sm) {
-          font-size: 35px;
-        }
-      }
-
-      .center-button {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        z-index: 25;
+      &:hover {
+        background-color: #5283FF;
+        cursor: pointer;
       }
     }
+  }
 
+  @include media-breakpoint-down(sm) {
+    .video-part-content .video-part-content-item {
+      font-size: 35px;
+    }
+    .video-part-gradient-box {
+      .gradient5 {
+        display: none;
+      }
 
-    .ellipse-paginator {
-      display: flex;
-      flex-direction: row;
-      position: absolute;
-      bottom: 28px;
-      left: calc(50% - 30px);
-      z-index: 26;
-
-
-      div {
-        width: 8px;
-        height: 8px;
-        background-color: #D1D6E3;
-        border-radius: 50%;
-        margin: 0 6px;
-
-        &:hover {
-          background-color: #5283FF;
-          cursor: pointer;
-        }
+      .gradient7 {
+        display: none;
       }
     }
   }

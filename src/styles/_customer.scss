@@ -1,57 +1,54 @@
-
-.customer nav {
+.customer {
   background: #FFFFFF;
-  height: 145px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 176px;
 
-
-  a {
-    width: 117px;
-    height: 29px;
+  nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: auto;
 
-    img:last-of-type {
-      visibility: collapse;
-      position: absolute;
-    }
+    a {
+      width: 117px;
+      height: 29px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 75px 0;
 
-    &:hover {
-
-      img:first-of-type {
+      img:last-of-type {
         visibility: collapse;
         position: absolute;
       }
 
-      img:last-of-type {
-        visibility: visible;
-        position: absolute;
+      &:hover {
+
+        img:first-of-type {
+          visibility: collapse;
+          position: absolute;
+        }
+
+        img:last-of-type {
+          visibility: visible;
+          position: absolute;
+        }
       }
     }
+  }
 
-    @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(md) {
+    nav {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+
+      a {
+        padding: 40px 0;
+      }
     }
-
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding: 0;
-  }
-  @include media-breakpoint-down(md) {
-    display: flex;
-    flex-direction: column;
-    height: 250px;
   }
 }
+
 
 
 

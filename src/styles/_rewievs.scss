@@ -1,45 +1,31 @@
-
 .reviews {
-  .reviews-text {
-    padding: 145px 0 0 276px;
-    height: 479px;
+  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
 
-    p {
+  .reviews-content {
+    padding: 160px 0;
+    text-align: center;
+
+    .reviews-content-title {
+      font-size: 10px;
       line-height: 12px;
       letter-spacing: 0.1em;
       color: #3D4F9F;
       margin: 0;
     }
 
-    h4 {
+    .reviews-content-item {
+      font-size: 36px;
       line-height: 45px;
       color: #3E52A8;
       margin: 30px 0 14px 0;
     }
 
-    p {
+    .reviews-content-desc {
+      font-size: 12px;
+      font-weight: 600;
       line-height: 23px;
       letter-spacing: 0.03em;
       color: #A4ABC8;
-
-      @include media-breakpoint-down(sm) {
-        font-size: 10px;
-      }
-    }
-
-    @include media-breakpoint-down(lg) {
-      padding: 145px 0 0 100px;
-    }
-
-    @include media-breakpoint-down(md) {
-      padding: 20px;
-      height: 250px;
-      text-align: center;
-    }
-
-    @include media-breakpoint-down(sm) {
-      padding: 50px;
-      height: 320px;
     }
   }
 
@@ -52,7 +38,7 @@
       display: flex;
       flex-direction: row;
       justify-content: start;
-      padding: 109px 0 0 0;
+      padding: 100px 0 0 0;
       box-sizing: border-box;
       white-space: nowrap;
       transition: 1s all;
@@ -66,16 +52,17 @@
         box-shadow: 0 5px 50px #F3F5FA;
         position: relative;
         padding: 41px 60px 35px 60px;
+        min-width: 80%;
+        margin: 0 10%;
 
-        min-width: 59%;
-        margin: 0 20.7%;
-
-        p {
+        .carousel-list-desc {
+          font-size: 14px;
+          font-weight: 400;
           letter-spacing: 0.03em;
           color: #676F95;
         }
 
-        .review-foto {
+        .carousel-list-img {
           position: absolute;
           bottom: -30px;
           left: calc(100% - 50% - 31px);
@@ -85,38 +72,6 @@
             width: 62px;
           }
         }
-
-        @include media-breakpoint-down(lg) {
-          min-width: 80%;
-          margin: 0 10%;
-        }
-        @include media-breakpoint-down(md) {
-          min-width: calc(107% - 10%);
-          margin: 0 10% 0 0;
-          display: flex;
-          justify-content: center;
-        }
-        @include media-breakpoint-down(sm) {
-          min-width: calc(92% - 2%);
-          margin: 0 5%;
-          display: flex;
-          justify-content: center;
-        }
-      }
-
-
-      @include media-breakpoint-down(md) {
-        padding: 20px;
-        margin: 20px 0;
-        display: flex;
-        align-items: center;
-      }
-
-      @include media-breakpoint-down(sm) {
-        padding: 20px 0;
-        display: flex;
-        align-items: center;
-        margin: 20px 0;
       }
     }
 
@@ -153,15 +108,49 @@
           background: #5283FF;
         }
       }
-
-
-      @include media-breakpoint-down(md) {
-        bottom: 20%;
-      }
     }
+  }
 
-    @include media-breakpoint-down(md) {
-      min-height: 350px;
+
+
+  @include media-breakpoint-down(lg) {
+    .carousel-list-background .carousel-list-wrapper .carousel-list {
+      min-width: 80%;
+      margin: 0 10%;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .reviews-content {
+      padding: 20px;
+    }
+    .carousel-list-background .little-squares {
+      bottom: 10%;
+    }
+    .carousel-list-background {
+      padding: 0 0 100px 0;
+    }
+    .carousel-list-background .carousel-list-wrapper {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+    .carousel-list-background .carousel-list-wrapper .carousel-list {
+      min-width: 80%;
+      margin: 0 10%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .reviews-content .reviews-content-desc {
+      font-size: 10px;
+    }
+    .carousel-list-background .carousel-list-wrapper .carousel-list {
+      min-width: 90%;
+      margin: 0 5%;
+    }
+    .carousel-list-background .carousel-list-wrapper .carousel-list .carousel-list-desc{
+      font-size: 10px;
     }
   }
 }

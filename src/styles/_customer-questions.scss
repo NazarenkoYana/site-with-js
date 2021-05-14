@@ -1,4 +1,5 @@
 .customer-questions {
+  background-color: #FFFFFF;
 
   .customer-questions-content {
     padding: 176px 0 0 0;
@@ -6,9 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF;
 
-    p {
+    .customer-questions-content-title {
+      font-size: 10px;
       line-height: 12px;
       letter-spacing: 0.1em;
       color: #3D4F9F;
@@ -16,17 +17,18 @@
       text-align: center;
     }
 
-    h4 {
+    .customer-questions-content-item {
+      font-size: 24px;
       line-height: 30px;
       text-align: center;
       color: #3D4F9F;
       margin-bottom: 68px;
     }
-
-    @include media-breakpoint-down(md) {
-      padding: 50px 10px 0;
-    }
-
   }
 
+  @include media-breakpoint-down(md) {
+    .customer-questions-content {
+      padding: 50px 10px 0;
+    }
+  }
 }

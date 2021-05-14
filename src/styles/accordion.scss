@@ -1,3 +1,8 @@
+//@import "node_modules/bootstrap/scss/functions";
+//@import "node_modules/bootstrap/scss/variables";
+//@import "node_modules/bootstrap/scss/mixins.scss";
+@import "bootstrap";
+
 .accordion-list {
   display: flex;
   flex-direction: column;
@@ -9,8 +14,10 @@
   .accordion-list-item {
 
     .accordion-list-item-title {
+      font-size: 15px;
+      font-weight: 500;
       display: flex;
-      padding: 20px 40px;
+      padding: 30px 5px;
       border-bottom: 1px solid #D8E3FE;
       outline: none;
       cursor: pointer;
@@ -19,11 +26,6 @@
       letter-spacing: 0.03em;
       color: #8E96B7;
       align-items: center;
-
-
-      @include media-breakpoint-down(sm) {
-        font-size: 13px;
-      }
 
       img.arrow {
         margin-right: 20px;
@@ -51,14 +53,6 @@
             letter-spacing: 0.03em;
             color: #8D96BD;
             margin: 0;
-
-            @include media-breakpoint-down(lg) {
-              font-size: 10px;
-            }
-            @include media-breakpoint-down(sm) {
-              margin-bottom: 10px;
-              font-size: 10px;
-            }
           }
 
           .container-btn-accordion {
@@ -68,38 +62,8 @@
               line-height: 16px;
               color: #7382A3;
               padding: 13px 32px;
-
-              @include media-breakpoint-down(sm) {
-                padding: 13px 10px;
-              }
-            }
-
-            @include media-breakpoint-up(md) {
-              display: flex;
-              justify-content: center;
-              margin-left: 30px;
             }
           }
-
-        }
-
-        @include media-breakpoint-down(lg) {
-          padding: 15px;
-          text-align: center;
-          display: flex;
-          justify-content: space-between;
-        }
-        @include media-breakpoint-down(md) {
-          padding: 15px;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-        }
-        @include media-breakpoint-down(sm) {
-          padding: 15px;
-          text-align: center;
-          display: flex;
-          justify-content: center;
         }
       }
     }
@@ -118,7 +82,55 @@
   }
 
 
-  @include media-breakpoint-down(md){
-    padding: 0 0 100px;
+  @include media-breakpoint-down(lg) {
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr {
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr .panel-btn p {
+      font-size: 10px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .accordion-list {
+      padding: 0 0 100px;
+    }
+    .accordion-list-item .accordion-list-item-title .accordion-list-item-content .accordion-list-item-content-wr {
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr .panel-btn .container-btn-accordion {
+      display: flex;
+      justify-content: center;
+      margin-left: 30px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .accordion-list-item .accordion-list-item-title {
+      font-size: 13px;
+    }
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr {
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr .panel-btn p {
+      margin: 0 0 10px 0;
+      font-size: 9px;
+      white-space: nowrap;
+    }
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr .panel-btn .container-btn-accordion button.btn.btn-started {
+      padding: 13px 10px;
+    }
+    .accordion-list-item .accordion-list-item-content .accordion-list-item-content-wr .panel-btn .container-btn-accordion{
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
   }
 }

@@ -1,23 +1,26 @@
-header {
+header{
   background: #FFFFFF;
   border-bottom: 1px solid #D8E3FE;
-  padding: 19px 117px;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding: 20px 0;
 
-  .img-header img {
-    width: 26px;
-    height: 26px;
-    display: flex;
-    align-items: center;
-
-    @include media-breakpoint-down(sm) {
-      display: none;
+  .header-logo {
+    img {
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
     }
   }
 
-  nav.menu {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     a {
+      font-size: 12px;
+      font-weight: 700;
       padding: 0 20px;
       color: #697CA6;
       font-style: normal;
@@ -32,32 +35,16 @@ header {
         text-decoration: none;
 
       }
-
-      @include media-breakpoint-down(sm) {
-        padding: 10px;
-      }
-    }
-
-    @include media-breakpoint-down(lg) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-    @include media-breakpoint-down(xs) {
-      display: none;
     }
   }
 
-  nav.icon-header {
+  .header-icon {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 100%;
     position: relative;
-    z-index: 2;
-    margin-top: 6px;
-    margin-right: 44px;
 
     a {
       width: 18px;
@@ -85,32 +72,33 @@ header {
       }
 
     }
-
-    @include media-breakpoint-down(md) {
-      margin-right: 0;
-      margin-top: 30px;
-    }
-    @include media-breakpoint-down(sm) {
-      margin-right: 0;
-      margin-top: 0;
-    }
   }
 
   button.btn.btn-started {
-    @include media-breakpoint-down(sm) {
+    white-space: nowrap;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .menu a {
+      padding: 10px;
+    }
+
+    button.btn.btn-started {
       display: none;
     }
   }
-
-  @include media-breakpoint-down(lg) {
-    padding: 19px 20px;
-  }
-
   @include media-breakpoint-down(xs) {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
     width: 100%;
+
+    .menu {
+      display: none;
+    }
   }
 }
+
+
+

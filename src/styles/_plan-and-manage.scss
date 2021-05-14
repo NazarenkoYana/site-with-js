@@ -1,87 +1,107 @@
 .plan-and-manage {
+  background-color: #F5F8FF;
 
-  .content-plan-and-manage {
-    padding: 209px 10px 160px 271px;
-    flex-direction: column;
-    box-sizing: inherit;
+  .plan-and-manage-content {
+    padding: 209px 0 160px 60px;
 
-    p {
+    .plan-and-manage-content-title {
+      font-size: 10px;
       line-height: 12px;
       letter-spacing: 0.1em;
       color: #3D4F9F;
       margin-bottom: 27px;
     }
 
-    h2 {
+    .plan-and-manage-content-item {
+      font-size: 36px;
+      font-weight: 400;
       line-height: 45px;
       color: #3D4F9F;
       margin-bottom: 27px;
-
-      @include media-breakpoint-down(sm) {
-        font-size: 30px;
-      }
-
-      span {
-        @include media-breakpoint-down(sm) {
-          font-size: 30px;
-        }
-      }
     }
 
-    p {
+    .plan-and-manage-content-desc {
+      font-size: 15px;
+      font-weight: 400;
       line-height: 29px;
       letter-spacing: 0.03em;
       color: #8D96BD;
       margin-bottom: 47px;
-
-
-      @include media-breakpoint-down(md) {
-        text-align: center;
-      }
     }
 
     button {
+      white-space: nowrap;
+
       img {
         margin-left: 6px;
+        height: 8px;
+        width: 7px;
       }
-    }
-
-    @include media-breakpoint-down(lg) {
-      padding: 50px 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 
-  .img-plan-and-manage {
-    padding: 170px 48px 160px 10px;
+  .plan-and-manage-img {
+    padding: 170px 0 160px 0;
+    display: flex;
+    justify-content: center;
 
     img {
       height: 446px;
       width: 662px;
       object-fit: contain;
-      @include media-breakpoint-down(xl) {
-        width: 500px;
-      }
+    }
+  }
 
-      @include media-breakpoint-down(lg) {
-        height: 246px;
-        width: 462px;
-        margin-top: 30px;
-      }
-      @include media-breakpoint-down(sm) {
-        height: 150px;
-        width: 300px;
-        margin-bottom: 20px;
+  @include media-breakpoint-down(xl) {
+    .plan-and-manage-img {
+      img {
+        transform: scale(0.8, 0.8);
       }
     }
-
-    @include media-breakpoint-down(lg) {
+  }
+  @include media-breakpoint-down(lg) {
+    .plan-and-manage-img {
       padding: 20px 10px;
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .plan-and-manage-img {
+      img {
+        transform: scale(0.6, 0.6);
+      }
+    }
+    .plan-and-manage-content {
+      padding: 50px 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .plan-and-manage-img {
+      img {
+        transform: scale(0.4, 0.4);
+      }
+    }
+    .plan-and-manage-content {
+      .plan-and-manage-content-item {
+        font-size: 30px;
+      }
+
+      .plan-and-manage-content-desc {
+        font-size: 10px;
+        text-align: center;
+      }
+    }
+    .plan-and-manage-content .center-button {
+      display: flex;
+      flex-direction: column;
+
+      button.btn.btn-primary {
+        margin-bottom: 20px;
+      }
     }
   }
 }

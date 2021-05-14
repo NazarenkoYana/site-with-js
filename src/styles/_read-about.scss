@@ -1,20 +1,17 @@
 .read-about {
+  background-color: #FFFFFF;
 
-
-  p {
+  .read-about-title {
+    font-size: 10px;
     line-height: 12px;
     letter-spacing: 0.1em;
     color: #3D4F9F;
     text-align: center;
-    margin-top: 171px;
-
-
-    @include media-breakpoint-down(sm){
-      margin-top: 100px;
-    }
+    margin: 171px 0 0 0;
   }
 
-  h3 {
+  .read-about-title-item {
+    font-size: 24px;
     line-height: 30px;
     text-align: center;
     color: #3D4F9F;
@@ -22,66 +19,39 @@
     margin-bottom: 92px;
   }
 
-  .cards {
+  .read-about-card {
+    border: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0 270px 92px;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
 
-    .card {
-      border: none;
-      display: flex;
-      align-items: center;
-      min-height: 254px;
-      min-width: 140px;
-
-      h4 {
-        line-height: 25px;
-        color: #4074F8;
-        margin-bottom: 25px;
-      }
-
-      p {
-        line-height: 19px;
-        color: #ADB3CB;
-        margin-bottom: 10px;
-        margin-top: 0;
-      }
-
-      img {
-        width: 69px;
-        height: 69px;
-        margin-bottom: 33px;
-      }
+    .read-about-card-item {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 25px;
+      color: #4074F8;
+      margin-bottom: 25px;
     }
 
-    @include media-breakpoint-down(lg) {
-      padding: 0 100px 92px;
-    }
-    @include media-breakpoint-down(md) {
-      display: flex;
-      flex-direction: column;
-    }
-    @include media-breakpoint-down(sm){
-      padding: 0 50px 50px;
+    .read-about-card-desc {
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 19px;
+      color: #ADB3CB;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
-    img.line-big {
-      margin: 0 30px;
-
-      img {
-        height: 1px;
-        width: 28px;
-      }
-
-      @include media-breakpoint-down(md) {
-        margin: 20px 0;
-      }
+    .read-about-card-img {
+      width: 69px;
+      height: 69px;
+      margin-bottom: 33px;
     }
   }
 
   .center-button {
+    margin-top: 100px;
     padding-bottom: 171px;
     display: flex;
     justify-content: center;
@@ -89,15 +59,9 @@
 
     p {
       padding: 0;
-      margin-top: 20px;
-      margin-right: 15px;
-      margin-left: 15px;
+      margin: 20px 15px;
       line-height: 19px;
       color: #ADB3CB;
-
-      @include media-breakpoint-down(md) {
-        margin: 0;
-      }
     }
 
     .line {
@@ -107,35 +71,39 @@
         height: 1px;
         width: 15px;
       }
+    }
+  }
 
-      @include media-breakpoint-down(md) {
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 100px 92px;
+  }
+  @include media-breakpoint-down(md) {
+
+    .read-about-card {
+      margin-bottom: 40px;
+    }
+    .center-button {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 50px;
+      margin-top: 50px;
+
+      p {
+        margin: 0;
+      }
+
+      .line {
         margin: 15px 0;
       }
     }
 
-    @include media-breakpoint-down(md) {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 50px;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 0 50px 50px;
+
+    .read-about-title {
+      margin-top: 100px;
     }
   }
-
-
-  .img-cloud1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .img-cloud2 {
-    top: 0;
-    left: 0;
-  }
-
-  .img-cloud3 {
-    top: 0;
-    left: 0;
-  }
-
-
 }

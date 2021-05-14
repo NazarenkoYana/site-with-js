@@ -1,50 +1,28 @@
 footer {
   background: #FFFFFF;
   border-top: 1px solid #D8E3FE;
-  padding: 93px 117px;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding: 90px 0;
 
-  .img-footer img {
+  .img-footer {
     width: 26px;
     height: 26px;
     display: flex;
     align-items: center;
   }
 
-  img.img-footer {
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-
-  nav.menu {
+  .menu {
     a {
+      font-size: 12px;
       padding: 0 20px;
       color: #697CA6;
       line-height: 15px;
       letter-spacing: 0.05em;
       text-shadow: 0 0 5px #E6E6E6;
       text-decoration: none;
-
-      @include media-breakpoint-down(sm) {
-        padding: 10px;
-      }
-
-    }
-
-    @include media-breakpoint-down(lg) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-    @include media-breakpoint-down(xs) {
-      display: none;
     }
   }
 
-  nav.icon-footer {
+  .icon-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -80,36 +58,61 @@ footer {
       }
 
     }
-
-    @include media-breakpoint-down(md) {
-      margin-right: 0;
-      margin-top: 30px;
-    }
-    @include media-breakpoint-down(sm) {
-      margin-right: 0;
-      margin-top: 0;
-    }
   }
 
-  button.btn.btn-started {
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-
-  @include media-breakpoint-down(lg) {
-    padding: 19px 20px;
-  }
-
-  p.copyright {
+  .copyright {
+    font-size: 15px;
     letter-spacing: 0.05em;
     color: #AEB8D0;
     padding: 28px 0 0 20px;
     margin: 0;
+  }
 
-    @include media-breakpoint-down(md) {
-      text-align: center;
-      padding: 28px 0 0 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .icon-footer {
+      margin-right: 0;
+      margin-top: 30px;
+    }
+    .copyright {
+      text-align: center;
+      padding: 20px 0 0 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .img-footer {
+      display: none;
+    }
+    .menu a {
+      padding: 10px;
+    }
+    .icon-footer {
+      margin-right: 0;
+      margin-top: 0;
+    }
+    button.btn.btn-started {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .menu {
+      display: none;
+    }
+  }
+
 }
+
+
+

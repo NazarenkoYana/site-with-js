@@ -23,25 +23,15 @@ body {
   padding: 0;
   background-color: #E4E6F0;
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 button {
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
+  font-size: 13px;
 }
 
-/** BACKGROUND COLOR**/
-.bg {
-  background-color: #F5F8FF;
-}
-
-.bg-w {
-  background-color: #FFFFFF;
-}
-
-.bg-grad {
-  background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
-}
 
 
 
